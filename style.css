@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(138, 138, 138);
+  background-image: linear-gradient(to top right, rgb(49, 126, 197), rgb(88, 168, 243));
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:link, a:visited {
+  color: #555;
+}
+
+.navigation_button {
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  top: 5rem;
+  right: 5rem;
+  position: fixed;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.navigation_icon {
+  position: relative;
+  margin-top: 2.8rem;
+}
+.navigation_icon, .navigation_icon::before, .navigation_icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+}
+.navigation_icon::before, .navigation_icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation_icon::before {
+  top: -0.8rem;
+}
+.navigation_icon::after {
+  top: 0.8rem;
+}
+.navigation_button:hover .navigation_icon::after {
+  top: 1rem;
+}
+.navigation_button:hover .navigation_icon::before {
+  top: -1rem;
+}
+.navigation_checkbox {
+  display: none;
+}
+.navigation_checkbox:checked ~ .navigation_button .navigation_icon {
+  background-color: transparent;
+}
+.navigation_checkbox:checked ~ .navigation_button .navigation_icon::after {
+  top: 0;
+  transform: rotateZ(135deg);
+}
+.navigation_checkbox:checked ~ .navigation_button .navigation_icon::before {
+  top: 0;
+  transform: rotateZ(-135deg);
+}
+.navigation_checkbox:checked ~ .navigation_background {
+  transform: scale(80);
+}
+.navigation_background {
+  width: 6rem;
+  height: 6rem;
+  background-image: radial-gradient(rgb(53, 231, 53), darkgreen);
+  display: inline-block;
+  border-radius: 50%;
+  top: 5rem;
+  right: 5rem;
+  position: fixed;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation_checkbox:checked ~ .navigation_nav {
+  transform: translate(-50%, -50%);
+}
+.navigation_nav {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  text-align: center;
+  height: 50vh;
+  transition: all 0.2s;
+  transition-delay: 0.4s;
+}
+.navigation_list {
+  font-size: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navigation_item {
+  margin-bottom: 1rem;
+}
+.navigation_item a {
+  color: #000;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  width: 20rem;
+  padding: 1rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 100%, white 50%);
+  transition: all 0.4s;
+  background-size: 100%;
+}
+.navigation_item a:hover {
+  background-size: 300%;
+  background-position: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

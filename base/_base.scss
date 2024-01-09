@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	background-color: rgb(138, 138, 138);
+	background-image: linear-gradient(to top right, rgb(49, 126, 197), rgb(88, 168, 243));
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,a:link,a:visited{
+	color: #555;
+}
