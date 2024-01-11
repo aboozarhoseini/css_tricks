@@ -76,13 +76,14 @@
 		right: 5rem;
 		position: fixed;
 		z-index: 1;
-		transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+		transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
 	}
 
 	&_checkbox:checked ~ &_nav {
 		// background-color: yellow;
 		// transform: translateX(0);
 		transform: translate(-50%, -50%);
+		
 	}
 	&_nav {
 		position: absolute;
@@ -95,8 +96,10 @@
 		transform: translate(-150%, -50%);
 		text-align: center;
 		height: 50vh;
-		transition: all 0.2s;
-		transition-delay: 0.4s;
+		transition: all 1s;
+		// transition-delay: 0.4s;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		
 	}
 
 	&_list {
@@ -120,12 +123,17 @@
 			width: 20rem;
 			padding: 1rem;
 
-			background-image: linear-gradient(120deg, transparent 0%, transparent 100%, white 50%);
-			transition: all 0.4s;
-			background-size: 100%;
+			background-image: linear-gradient(120deg, transparent 0%, transparent 80%, white 50%);
+			transition: background-position 0.3s, transform 0.2s, color 0.4s;
+			// background-size: 100%;
+
+			background-size: 600%;
+			// border: 1px solid #000;
+
 			&:hover {
-				background-size: 300%;
+				color: rgb(53, 231, 53);
 				background-position: 100%;
+				transform: translateX(-1rem);
 			}
 		}
 	}

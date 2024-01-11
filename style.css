@@ -14,6 +14,7 @@ body {
   height: 100vh;
   background-color: rgb(138, 138, 138);
   background-image: linear-gradient(to top right, rgb(49, 126, 197), rgb(88, 168, 243));
+  overflow: hidden;
 }
 
 ul {
@@ -24,7 +25,9 @@ a {
   text-decoration: none;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   color: #555;
 }
 
@@ -96,7 +99,7 @@ a, a:link, a:visited {
   right: 5rem;
   position: fixed;
   z-index: 1;
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .navigation_checkbox:checked ~ .navigation_nav {
   transform: translate(-50%, -50%);
@@ -111,8 +114,8 @@ a, a:link, a:visited {
   transform: translate(-150%, -50%);
   text-align: center;
   height: 50vh;
-  transition: all 0.2s;
-  transition-delay: 0.4s;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .navigation_list {
   font-size: 2rem;
@@ -132,13 +135,14 @@ a, a:link, a:visited {
   display: inline-block;
   width: 20rem;
   padding: 1rem;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 100%, white 50%);
-  transition: all 0.4s;
-  background-size: 100%;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 80%, white 50%);
+  transition: background-position 0.3s, transform 0.2s, color 0.4s;
+  background-size: 600%;
 }
 .navigation_item a:hover {
-  background-size: 300%;
+  color: rgb(53, 231, 53);
   background-position: 100%;
+  transform: translateX(-1rem);
 }
 
 /*# sourceMappingURL=style.css.map */
