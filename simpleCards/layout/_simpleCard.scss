@@ -1,0 +1,181 @@
+.sectionCards {
+	// border: 1px solid #000;
+	margin: 10rem auto 0;
+	height: 50rem;
+	width: 100vw;
+	background-color: $color-white;
+	box-shadow: 0 1rem 1rem 0 gray;
+
+	&_bg {
+		transform: skewX(-15deg);
+		// clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+		height: 100%;
+		width: 80%;
+
+		padding: 1rem 4rem;
+		background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url('./img/nat-1-large.jpg');
+		background-position: center;
+		background-size: cover;
+
+		margin: 0 auto;
+		border: 1px solid #000;
+
+		& > * {
+			transform: skew(15deg);
+		}
+	}
+	.cardInfo {
+		background-color: white;
+		backface-visibility: hidden;
+		transition: all 0.8s;
+	}
+	&_backCard {
+		box-shadow: 0.3rem 0.5rem 0.8rem 0 rgba(0, 0, 0, 0.3);
+		background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+		margin: 3rem;
+		width: 25rem;
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: 45rem;
+		text-align: center;
+		// opacity: 0.2;
+		transform: rotateY(-180deg);
+
+		&_header {
+			margin-top: 10rem;
+			color: white;
+		}
+
+		&--only {
+			text-transform: uppercase;
+			// border: 1px solid #000;
+			margin-bottom: 4rem;
+			font-weight: 300;
+			font-size: 2rem;
+		}
+
+		&--price{
+			font-weight: 100;
+			font-size: 4rem;
+		}
+		
+		&_link{
+			margin-top: 2rem;
+		}
+
+	}
+	&_card {
+		// display: none; //! test for comment
+		height: 45rem;
+
+		cursor: pointer;
+		box-shadow: 0.3rem 0.5rem 0.8rem 0 rgba(0, 0, 0, 0.3);
+		margin: 3rem;
+		width: 25rem;
+		// transform: rotateY(45deg);
+
+		&--photo {
+			width: 100%;
+			clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+			height: 15rem;
+
+			background-position: center;
+			background-size: cover;
+			&--1 {
+				background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(157, 255, 222, 0.8)), url('./img/nat-2.jpg');
+			}
+
+			&--2 {
+				background-image: linear-gradient(to right, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.6)), url('./img/nat-1.jpg');
+			}
+
+			&--3 {
+				background-image: linear-gradient(to right, rgba($color-tertiary-light, 0.8), rgba($color-tertiary-dark, 0.8)), url('./img/nat-3.jpg');
+			}
+		}
+
+		&--titles {
+			position: relative;
+			span {
+				// border: 1px solid #000;
+				position: absolute;
+				bottom: 0;
+				right: 10%;
+				padding: 1rem 2rem;
+				font-size: 1.6em;
+				text-transform: uppercase;
+				font-weight: 600;
+
+				color: white;
+				&:first-child {
+					bottom: 5rem;
+				}
+			}
+			&--1 {
+				span {
+					background-color: rgba($color-secondary-dark, 0.8);
+				}
+			}
+			&--2 {
+				span {
+					background-color: rgba($color-primary-dark, 0.8);
+				}
+			}
+			&--3 {
+				span {
+					background-color: rgba($color-grey-dark, 0.8);
+				}
+			}
+		}
+
+		ul {
+			text-align: center;
+			font-size: 1.6rem;
+			font-weight: 500;
+			// background-color: #fff;
+			width: 80%;
+			margin: 2rem auto 0;
+			li {
+				border-bottom: 1px solid rgba($color-grey-dark-2, 0.6);
+				padding: 1.2rem 0;
+				color: rgba($color-grey-dark-3, 1);
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	&_card:hover {
+		transform: rotateY(180deg);
+	}
+
+	&_card:hover ~ &_backCard {
+		transform: rotateY(0);
+		// backface-visibility: visible;
+	}
+}
+
+.prespective {
+	perspective: 100rem;
+}
+/* 
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+*/

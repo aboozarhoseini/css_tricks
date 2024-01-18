@@ -1,0 +1,38 @@
+.composition {
+	// border: 1px solid #000;
+	// background-color: blue;
+	// width: 40rem;
+	height: 40rem;
+	position: relative;
+
+	&_img {
+		transition: all 0.2s;
+		position: absolute;
+		cursor: pointer;
+		border-radius: 0.5rem;
+		outline-offset: 2rem;
+		&:hover {
+			outline: 1rem solid rgb(51, 201, 51);
+			z-index: 10;
+			transform: scale(1.1);
+		}
+
+		&-1 {
+			top: 1rem;
+			right: 10rem;
+		}
+
+		&-2 {
+			top: 7rem;
+			right: 19rem;
+		}
+
+		&-3 {
+			top: 14rem;
+			right: 7rem;
+		}
+
+	}
+
+
+}
